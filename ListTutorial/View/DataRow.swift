@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct DataRow: View {
+    let cat: Cat
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(cat.name).font(.system(size: 30)).fontWeight(.bold).frame(maxWidth: .infinity, alignment: .leading)
+            Text(cat.description).frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 }
 
 struct DataRow_Previews: PreviewProvider {
     static var previews: some View {
-        DataRow()
+        VStack {
+            DataRow(cat: cats[0])
+            DataRow(cat: cats[1])
+        }
     }
 }

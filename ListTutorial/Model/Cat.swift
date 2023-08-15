@@ -5,4 +5,8 @@
 //  Created by Charles Suddens on 13/08/23.
 //
 
-import Foundation
+struct Cat: Hashable, Codable {
+    var id: Int
+    var name: String
+    var description: String
+}
